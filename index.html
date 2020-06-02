@@ -44,27 +44,25 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Welcome Back</h4>
+                    <h4 class="modal-title">Welcome Back!</h4>
                 </div>
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                            <label for="username-si">Username</label>
+                            <input type="text" class="form-control" id="username-si" placeholder="Enter your username" value="" required>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <label for="password-si">Password</label>
+                            <input type="password" class="form-control" id="password-si" placeholder="Enter your password" value="" required>
                         </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                        <div class="form-button">
+                            <button type="submit" class="btn btn-success">Sign In</button>
                         </div>
-                        <button type="submit" class="btn btn-primary">Sign In</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <div class="text-center">
+                            <p class="font-weight-bold"> <b>Not a member? <a href="#" id="link-signup" data-dismiss="modal" data-toggle="modal" data-target="#signupModal">Sign Up</a></b></p>
+                        </div>
                     </form>
-                </div>
-                <div class="modal-footer">
                 </div>
             </div>
         </div>
@@ -87,12 +85,12 @@
                             <input type="text" class="form-control" id="name" placeholder="Enter your name" value="" required>
                         </div>
                         <div class="form-group">
-                            <label for="username">Enter your Username</label>
-                            <input type="text" class="form-control" id="username" placeholder="Enter your username" value="" required>
+                            <label for="username-su">Enter your Username</label>
+                            <input type="text" class="form-control" id="username-su" placeholder="Enter your username" value="" required>
                         </div>
                         <div class="form-group">
-                            <label for="password">Enter your Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Enter your password" value="" required>
+                            <label for="password-su">Enter your Password</label>
+                            <input type="password" class="form-control" id="password-su" placeholder="Enter your password" value="" required>
                         </div>
                         <div class="form-group">
                             <label for="confirmPassword">Confirm Password</label>

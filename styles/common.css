@@ -42,3 +42,11 @@ body, html {
 .clear{
     clear: both;
 }
+
+.form-button{
+    text-align: right;
+}
+
+.modal-dialog{
+    width: 25%;
+}

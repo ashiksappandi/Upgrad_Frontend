@@ -3,6 +3,10 @@ body, html {
     margin: 0;
 }
 
+p{
+    margin: 14px 0px;
+}
+
 .page {
     /* The image used */
     background-image: url("../images/background.jpg");
@@ -44,11 +48,19 @@ body, html {
 }
 
 .form-button{
-    text-align: right;
+    text-align: center;
 }
 
-.modal-dialog{
-    width: 25%;
+.modal-signin, .modal-signup{
+    width: 25% !important;
+}
+
+.modal-post{
+    width: 50% !important;
+}
+
+.btn-form-signin, .btn-form-signup{
+    width: 100%;
 }
 
 .post-button-content{

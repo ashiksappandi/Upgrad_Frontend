@@ -7,19 +7,6 @@ p{
     margin: 14px 0px;
 }
 
-.page {
-    /* The image used */
-    background-image: url("../images/background.jpg");
-
-    /* Full height */
-    height: 100%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .logo-name{
     font-family: 'Montez', cursive;
     font-size: 3em;
@@ -45,28 +32,4 @@ p{
 
 .clear{
     clear: both;
-}
-
-.form-button{
-    text-align: center;
-}
-
-.modal-signin, .modal-signup{
-    width: 25% !important;
-}
-
-.modal-post{
-    width: 50% !important;
-}
-
-.btn-form-signin, .btn-form-signup{
-    width: 100%;
-}
-
-.post-button-content{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -100px;
 }

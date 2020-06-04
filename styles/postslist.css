@@ -1,0 +1,48 @@
+.page{
+    background-color: #ffeedd;
+}
+
+.body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+}
+
+.post-card{
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    height: 125px;
+    box-shadow: 2px 2px 8px #333;
+    border-radius: 10px;
+    margin: 20px;
+    background-color: #FFF;
+}
+
+.post-user{
+    border: 1px solid #FFF;
+    border-radius: 10px 0px 0px 10px;
+    width: 60%;
+    font-weight: bold;
+    color: #7a7776;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+}
+
+.post-detail{
+    border: 1px solid #e8e8e8;
+    border-radius: 0px 10px 10px 0px;
+    border-left: 0;
+    background-color: #e8e8e8;
+    text-align: justify;
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+.post-title{
+    color: #9d9fa7;
+}

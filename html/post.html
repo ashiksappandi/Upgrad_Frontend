@@ -1,10 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&family=Ubuntu+Mono&display=swap" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="../styles/common.css" rel="stylesheet">
+    <link href="../styles/post.css" rel="stylesheet">
 </head>
 <body>
 
+    <div class="page">
+        <div class="header">
+            <div class="logo">
+                <a href="../index.html" class="logo-link"><p class="logo-name">ScriBBler</p></a>
+                <p class="logo-caption">Explore, Imagine, Create</p>
+            </div>
+            <div class="logon">
+                <button type="button" class="btn btn-signin btn-primary" id="btn-signin" data-toggle="modal" data-target="#signinModal">Sign In</button>
+                <button type="button" class="btn btn-signup btn-primary" id="btn-signup" data-toggle="modal" data-target="#signupModal">Sign Up</button>
+            </div>
+            <div class="clear"></div>
+        </div>
+    
+        <div class="body">
+            <div class="post-section">
+                <div class="post-title">
+                    <h2>You must strictly keep HTML, CSS and JavaScript portion.</h2>
+                </div>
+                <div class="post-user">
+                    <p>Ashik Narayan</p>
+                </div>
+                <div class="post-edit">
+                    <button type="button" class="btn btn-danger edit-btn">Edit</button>
+                </div>
+                <div class="clear"></div>
+                <div class="post-content">
+                    <p>Unless explicitly mentioned otherwise (for example, at some places, it might be mentioned that a certain button MUST be red in color), you can customize your own CSS for any HTML element you want. However, please keep in mind that the overall appearance of any HTML page must be similar (if not identical) to the outcome of the screen mentioned prior to each part of the assignment. This means that if certain elements are placed towards the top-right part of the screen in the final outcome figure, then they MUST be placed at the top-right corner ONLY. Failing to do so will lead to deduction of marks. Note that there might be multiple ways in which a certain CSS effect can be achieved. So the exact syntax of the CSS code does not matter, but the overall appearance of any given page must be similar to the expected outcome. Unless explicitly mentioned otherwise (for example, at some places, it might be mentioned that a certain button MUST be red in color), you can customize your own CSS for any HTML element you want. However, please keep in mind that the overall appearance of any HTML page must be similar (if not identical) to the outcome of the screen mentioned prior to each part of the assignment. This means that if certain elements are placed towards the top-right part of the screen in the final outcome figure, then they MUST be placed at the top-right corner ONLY. Failing to do so will lead to deduction of marks. Note that there might be multiple ways in which a certain CSS effect can be achieved. So the exact syntax of the CSS code does not matter, but the overall appearance of any given page must be similar to the expected outcome</p>
+                </div>
+            </div>
+            <div class="like-section">
+                <button type="button" class="btn btn-danger like-btn" id= "likeComment" onclick="commentLiked()">
+                    <i class="fa fa-thumbs-up" aria-hidden="true"></i> Like </button>
+                <p id="likeCount">Be the first one to like this!</p>
+            </div>
+            <div class="comment-section">
+                <div class="comment-input-section">
+                    <textarea rows="5" class="comment-input" id="userComments" value="" placeholder="Leave a comment..."></textarea>
+                    <button id="addList" class="btn btn-danger comment-btn" onclick="addComment(userComments)">Comment</button>
+                </div>
+                <div class="comment-display-section">
+                    <p><strong>All Comments</strong></p>
+                    <div class="allComments" id="allComments">      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sign In Model -->
+    <div class="modal fade" id="signinModal" role="dialog">
+        <div class="modal-signin modal-dialog modal-dialog-centered">
+    
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Welcome Back!</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username-si">Username</label>
+                            <input type="text" class="form-control" id="username-si" placeholder="Enter your username" value="" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password-si">Password</label>
+                            <input type="password" class="form-control" id="password-si" placeholder="Enter your password" value="" required>
+                        </div>
+                        <div class="form-button">
+                            <button type="submit" class="btn btn-success btn-form-signin">Sign In</button>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-weight-bold"> <b>Not a member? <a href="#" id="link-signup" data-dismiss="modal" data-toggle="modal" data-target="#signupModal">Sign Up</a></b></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signupModal" role="dialog">
+        <div class="modal-signup modal-dialog modal-dialog-centered ">
+    
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Get Started</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" value="" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="username-su">Enter your Username</label>
+                            <input type="text" class="form-control" id="username-su" placeholder="Enter your username" value="" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password-su">Enter your Password</label>
+                            <input type="password" class="form-control" id="password-su" placeholder="Enter your password" value="" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Re-enter your password" value="" required>
+                        </div>
+                        <div class="form-button">
+                            <button type="submit" class="btn btn-success  btn-form-signup">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/post.js"></script>
+    <script src="../scripts/common.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>

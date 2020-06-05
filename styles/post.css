@@ -1,0 +1,47 @@
+.body{
+    margin: 1% 5%;
+}
+
+.post-title{
+    text-align: center;
+}
+
+.post-user{
+    float: left;
+    height: 50px;
+    padding-top: 10px;
+}
+
+.post-edit{
+    float: right;
+    height: 50px;
+}
+
+.post-content{
+    text-align: justify;
+}
+
+.comment-section{
+    width: 50%;
+}
+
+.comment-list{
+    border: 5px solid #DDD;
+    margin: 0   ;
+    border-top: none;
+    padding: 4px 5px;
+}
+
+.comment-input{
+    width: 100%;
+}
+
+.comment-btn, .edit-btn, .like-btn{
+    background-color: #ed2553;
+    color: #FFFFFF;
+    min-width: 75px;
+}
+
+.like-section, .comment-display-section, .comment-input-section, .post-section{
+    margin-bottom: 30px;
+}

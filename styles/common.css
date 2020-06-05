@@ -4,7 +4,7 @@ body, html {
 }
 
 p{
-    margin: 14px 0px;
+    margin: 14px 0;
 }
 
 .logo-name{
@@ -12,6 +12,10 @@ p{
     font-size: 3em;
     margin: 0px;
     color: #0d01ff;
+}
+
+.logo-link:hover{
+    text-decoration: none;
 }
 
 .logo-caption{

@@ -33,3 +33,15 @@ p{
 .clear{
     clear: both;
 }
+
+.btn-form-signin, .btn-form-signup{
+    width: 100%;
+}
+
+.form-button{
+    text-align: center;
+}
+
+.modal-signin, .modal-signup{
+    width: 25% !important;
+}

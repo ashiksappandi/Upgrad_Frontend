@@ -9,12 +9,17 @@
 .post-user{
     float: left;
     height: 50px;
-    padding-top: 10px;
+    font-family: 'Courgette', cursive;
 }
 
-.post-edit{
+.post-edit, .post-save{
     float: right;
     height: 50px;
+    margin-top: 10px;
+}
+
+.post-save{
+    display: none;
 }
 
 .post-content{
@@ -36,12 +41,20 @@
     width: 100%;
 }
 
-.comment-btn, .edit-btn, .like-btn{
+.comment-btn, .edit-btn, .like-btn, .save-btn{
     background-color: #ed2553;
     color: #FFFFFF;
     min-width: 75px;
 }
 
+.comment-btn:hover, .edit-btn:hover, .like-btn:hover, .save-btn:hover{
+    background-color: #d11742;
+}
+
 .like-section, .comment-display-section, .comment-input-section, .post-section{
     margin-bottom: 30px;
+}
+
+.editable{
+    border : 1px solid pink;
 }

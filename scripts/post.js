@@ -18,6 +18,24 @@ function commentLiked() {
         liketext.innerHTML = '1 person likes this!';
     }else if(likeCount > 1){
         likeLabel.innerHTML = '<i class="fa fa-thumbs-up" aria-hidden="true"></i> Liked!';
-        liketext.innerHTML = likeCount+" people have liked this!";
+        liketext.innerHTML = likeCount+" people like this!";
     }
+}
+
+function editPost() {
+    document.getElementById("post-edit").style.display = 'none';
+    document.getElementById("post-save").style.display = 'block';
+    document.getElementById("postTitle").contentEditable = true;
+    document.getElementById("postContent").contentEditable = true;
+    document.getElementById("postTitle").classList.add('editable');
+    document.getElementById("postContent").classList.add('editable');
+}
+
+function savePost() {
+    document.getElementById("post-save").style.display = 'none';
+    document.getElementById("post-edit").style.display = 'block';
+    document.getElementById("postTitle").contentEditable = false;
+    document.getElementById("postContent").contentEditable = false;
+    document.getElementById("postTitle").classList.remove('editable');
+    document.getElementById("postContent").classList.remove('editable');
 }

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montez&family=Ubuntu+Mono&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&family=Ubuntu+Mono&family=Courgette&display=swap" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="../styles/common.css" rel="stylesheet">
     <link href="../styles/post.css" rel="stylesheet">
@@ -30,17 +30,21 @@
         <div class="body">
             <div class="post-section">
                 <div class="post-title">
-                    <h2>You must strictly keep HTML, CSS and JavaScript portion.</h2>
+                    <h2 id="postTitle">Everything you should know about ‘module’ & ‘require’ in Node.js</h2>
                 </div>
                 <div class="post-user">
-                    <p>Ashik Narayan</p>
+                    <h3>Ashik Narayan</h3>
                 </div>
-                <div class="post-edit">
-                    <button type="button" class="btn btn-danger edit-btn">Edit</button>
+                <div class="post-edit" id="post-edit">
+                    <button type="button" class="btn btn-danger edit-btn" onclick="editPost()">Edit <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                </div>
+                <div class="post-save" id="post-save">
+                    <button type="button" class="btn btn-danger save-btn" onclick="savePost()">Save <i class="fa fa-floppy-o" aria-hidden="true"></i></button>
                 </div>
                 <div class="clear"></div>
                 <div class="post-content">
-                    <p>Unless explicitly mentioned otherwise (for example, at some places, it might be mentioned that a certain button MUST be red in color), you can customize your own CSS for any HTML element you want. However, please keep in mind that the overall appearance of any HTML page must be similar (if not identical) to the outcome of the screen mentioned prior to each part of the assignment. This means that if certain elements are placed towards the top-right part of the screen in the final outcome figure, then they MUST be placed at the top-right corner ONLY. Failing to do so will lead to deduction of marks. Note that there might be multiple ways in which a certain CSS effect can be achieved. So the exact syntax of the CSS code does not matter, but the overall appearance of any given page must be similar to the expected outcome. Unless explicitly mentioned otherwise (for example, at some places, it might be mentioned that a certain button MUST be red in color), you can customize your own CSS for any HTML element you want. However, please keep in mind that the overall appearance of any HTML page must be similar (if not identical) to the outcome of the screen mentioned prior to each part of the assignment. This means that if certain elements are placed towards the top-right part of the screen in the final outcome figure, then they MUST be placed at the top-right corner ONLY. Failing to do so will lead to deduction of marks. Note that there might be multiple ways in which a certain CSS effect can be achieved. So the exact syntax of the CSS code does not matter, but the overall appearance of any given page must be similar to the expected outcome</p>
+                    <p id="postContent">Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
+                        named xyz.</p>
                 </div>
             </div>
             <div class="like-section">
@@ -51,7 +55,7 @@
             <div class="comment-section">
                 <div class="comment-input-section">
                     <textarea rows="5" class="comment-input" id="userComments" value="" placeholder="Leave a comment..."></textarea>
-                    <button id="addList" class="btn btn-danger comment-btn" onclick="addComment(userComments)">Comment</button>
+                    <button id="addList" class="btn btn-danger" onclick="addComment(userComments)">Comment</button>
                 </div>
                 <div class="comment-display-section">
                     <p><strong>All Comments</strong></p>

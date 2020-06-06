@@ -1,3 +1,15 @@
+onLoad();
+
+function onLoad() {
+    var user = sessionStorage.getItem('user');
+    var title = sessionStorage.getItem('title');
+    var content = sessionStorage.getItem('content');
+
+    document.getElementById('postUser').innerText = user;
+    document.getElementById('postTitle').innerText = title;
+    document.getElementById('postContent').innerText = content;
+}
+
 var commentCount = 0;
 function addComment(userComment){
     if(userComment.value.trim() !== "" ) {

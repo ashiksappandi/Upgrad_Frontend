@@ -104,3 +104,7 @@ body{
 .post-content a{
     color: #333;
 }
+
+.fa-ellipsis-h{
+    cursor: pointer;
+}

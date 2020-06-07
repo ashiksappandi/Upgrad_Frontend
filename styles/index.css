@@ -13,6 +13,8 @@
 
 .modal-post{
     width: 50% !important;
+    margin: auto;
+    margin-top: 100px;
 }
 
 .post-button-content{

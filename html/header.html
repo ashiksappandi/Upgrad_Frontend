@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<!-- Header -->
+<div class="header">
+    <div class="logo">
+        <a href="..\index.html" class="logo-link"><p class="logo-name">ScriBBler</p></a>
+        <p class="logo-caption">Explore, Imagine, Create</p>
+    </div>
+    <div class="logon">
+        <button type="button" class="btn btn-signin btn-primary" id="btn-signin" data-toggle="modal" data-target="#signinModal">Sign In</button>
+        <button type="button" class="btn btn-signup btn-primary" id="btn-signup" data-toggle="modal" data-target="#signupModal">Sign Up</button>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<!-- Sign In Model -->
+<div class="modal fade" id="signinModal" role="dialog">
+    <div class="modal-signin modal-dialog modal-dialog-centered">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Welcome Back!</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username-si">Username</label>
+                        <input type="text" class="form-control" id="username-si" placeholder="Enter your username" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password-si">Password</label>
+                        <input type="password" class="form-control" id="password-si" placeholder="Enter your password" value="" required>
+                    </div>
+                    <div class="form-button">
+                        <button type="submit" class="btn btn-success btn-form-signin">Sign In</button>
+                    </div>
+                    <div class="text-center">
+                        <p class="font-weight-bold"> <b>Not a member? <a href="#" id="link-signup" data-dismiss="modal" data-toggle="modal" data-target="#signupModal">Sign Up</a></b></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sign Up Modal -->
+<div class="modal fade" id="signupModal" role="dialog">
+    <div class="modal-signup modal-dialog modal-dialog-centered ">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Get Started</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="username-su">Enter your Username</label>
+                        <input type="text" class="form-control" id="username-su" placeholder="Enter your username" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password-su">Enter your Password</label>
+                        <input type="password" class="form-control" id="password-su" placeholder="Enter your password" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Re-enter your password" value="" required>
+                    </div>
+                    <div class="form-button">
+                        <button type="submit" class="btn btn-success  btn-form-signup">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

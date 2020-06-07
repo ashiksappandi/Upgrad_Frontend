@@ -48,4 +48,7 @@ p{
 
 .modal-signin, .modal-signup{
     width: 25% !important;
+    margin: auto;
+    margin-top: 100px;
+    min-width: 300px;
 }
